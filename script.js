@@ -36,7 +36,7 @@ const images = {
         "images/women dress.jpg",
 
     "Mens Casual Shirt":
-        "images/casual shirt.jpg",
+        "images/casual.jpg",
 
     "Womens Stylish Top":
         "images/stylish top.jpg",
