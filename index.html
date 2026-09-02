@@ -1,0 +1,937 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Vellora Fashion Hub | Men & Women Fashion</title>
+
+<meta name="description" content="Vellora Fashion Hub offers stylish and affordable fashion clothing for men and women in University of Ibadan, Ajibode.">
+<meta name="keywords" content="Vellora Fashion Hub, fashion, men's clothing, women's clothing, Ajibode fashion, University of Ibadan fashion">
+<meta name="author" content="Vellora Fashion Hub">
+
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="stylesheet" href="style.css">
+
+</head><body><!-- ================================
+     LOADING SCREEN
+================================ --><div id="loading-screen">
+    <div class="loading-brand">
+        VELLORA
+        <span>FASHION HUB</span>
+    </div><div class="loading-spinner"></div>
+
+<p>Style • Confidence • Elegance</p>
+
+</div><!-- ================================
+     NAVIGATION
+================================ --><header>
+    <nav class="navbar">    <a href="#home" class="logo">
+        VELLORA <span>FASHION HUB</span>
+    </a>
+
+    <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#shop">Shop</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+
+        <li>
+            <a href="#cart" class="cart-icon">
+                🛍️
+                <span id="cart-count">0</span>
+            </a>
+        </li>
+    </ul>
+
+    <button class="menu-btn" onclick="toggleMenu()" aria-label="Open menu">
+        ☰
+    </button>
+
+</nav>
+
+</header><!-- ================================
+     HERO
+================================ --><section class="hero" id="home"><div class="hero-content">
+
+    <p class="welcome">WELCOME TO VELLORA FASHION HUB</p>
+
+    <h1>
+        Your Style.<br>
+        <span>Your Statement.</span>
+    </h1>
+
+    <p class="hero-description">
+        Discover stylish, quality and affordable fashion for both
+        men and women. From everyday outfits to statement pieces,
+        Vellora Fashion Hub brings your wardrobe to life.
+    </p>
+
+    <div class="hero-buttons">
+        <a href="#shop" class="main-btn">
+            Shop Collection
+        </a>
+
+        <a href="#about" class="secondary-btn">
+            Discover Vellora
+        </a>
+    </div>
+
+</div>
+
+</section><!-- ================================
+     INTRODUCTION
+================================ --><section class="intro"><p class="gold-text">FASHION FOR EVERYONE</p>
+
+<h2>Dress Well. Feel Confident.</h2>
+
+<p>
+    At Vellora Fashion Hub, we believe fashion should be stylish,
+    comfortable and accessible. Explore carefully selected clothing
+    for both men and women, designed to help you look your best
+    wherever you go.
+</p>
+
+</section><!-- ================================
+     FEATURED
+================================ --><section class="featured"><div class="section-heading">
+    <p>OUR PICKS</p>
+    <h2>Featured Fashion</h2>
+</div>
+
+<div class="featured-container">
+
+    <div class="featured-card">
+        <img src="images/women collection.jpg" alt="Women's fashion">
+        <div class="featured-info">
+            <span>WOMEN</span>
+            <h3>Women's Collection</h3>
+            <p>
+                Elegant and trendy pieces for every occasion.
+            </p>
+            <a href="#shop" class="featured-btn">
+                Shop Women
+            </a>
+        </div>
+    </div>
+
+    <div class="featured-card">
+        <img src="images/men collection.jpg" alt="Men's fashion">
+        <div class="featured-info">
+            <span>MEN</span>
+            <h3>Men's Collection</h3>
+            <p>
+                Smart, stylish and comfortable fashion for men.
+            </p>
+            <a href="#shop" class="featured-btn">
+                Shop Men
+            </a>
+        </div>
+    </div>
+
+    <div class="featured-card">
+        <img src="images/everyday fashion.jpg" alt="Unisex fashion">
+        <div class="featured-info">
+            <span>UNISEX</span>
+            <h3>Everyday Style</h3>
+            <p>
+                Versatile pieces made for effortless everyday style.
+            </p>
+            <a href="#shop" class="featured-btn">
+                Explore
+            </a>
+        </div>
+    </div>
+
+</div>
+
+</section>
+  
+  <!-- ================================
+     SHOP
+================================ -->
+  
+<section class="shop" id="shop">
+  <div class="section-heading">
+    <p>VELLORA COLLECTION</p>
+    <h2>Shop Our Fashion</h2>
+</div>
+
+<div class="shop-tools">
+
+    <input
+        type="text"
+        id="product-search"
+        placeholder="Search for clothing..."
+        oninput="searchProducts()"
+    >
+
+</div>
+
+<div class="category-buttons">
+
+    <button onclick="filterProducts('all')">All</button>
+
+    <button onclick="filterProducts('women')">
+        Women
+    </button>
+
+    <button onclick="filterProducts('men')">
+        Men
+    </button>
+
+    <button onclick="filterProducts('unisex')">
+        Unisex
+    </button>
+
+    <button onclick="filterProducts('tops')">
+        Tops
+    </button>
+
+    <button onclick="filterProducts('dresses')">
+        Dresses
+    </button>
+
+    <button onclick="filterProducts('accessories')">
+        Accessories
+    </button>
+
+  <button onclick="filterProducts('bags')">
+    Bags
+  </button>
+
+</div>
+
+<div class="products">
+
+
+    <!-- PRODUCT 1 -->
+
+    <div class="product-card" data-category="women">
+
+        <div class="product-image">
+            <img src="images/women dress.jpg" alt="Elegant Women's Dress">
+        </div>
+
+        <div class="product-info">
+
+            <span class="product-tag">WOMEN</span>
+
+            <h3>Elegant Women's Dress</h3>
+
+            <p>
+                A stylish and comfortable dress perfect for outings
+                and special occasions.
+            </p>
+
+            <h4 class="price">₦12,000</h4>
+
+            <button onclick="addToCart('Elegant Womens Dress', 12000)">
+                Add to Cart
+            </button>
+
+            <button
+                class="details-btn"
+                onclick="showProductDetails(
+                    'Elegant Womens Dress',
+                    'images/women dress.jpg',
+                    'A stylish and comfortable dress perfect for outings and special occasions.',
+                    12000
+                )">
+                View Details
+            </button>
+
+        </div>
+    </div>
+
+
+    <!-- PRODUCT 2 -->
+
+    <div class="product-card" data-category="men">
+
+        <div class="product-image">
+            <img src="images/casual shirt.jpg" alt="Men's Casual Shirt">
+        </div>
+
+        <div class="product-info">
+
+            <span class="product-tag">MEN</span>
+
+            <h3>Men's Casual Shirt</h3>
+
+            <p>
+                A smart and comfortable shirt for casual and
+                semi-formal occasions.
+            </p>
+
+            <h4 class="price">₦12,000</h4>
+
+            <button onclick="addToCart('Mens Casual Shirt', 12000)">
+                Add to Cart
+            </button>
+
+            <button
+                class="details-btn"
+                onclick="showProductDetails(
+                    'Mens Casual Shirt',
+                    'images/casual shirt.jpg',
+                    'A smart and comfortable shirt for casual and semi-formal occasions.',
+                    12000
+                )">
+                View Details
+            </button>
+
+        </div>
+    </div>
+
+
+    <!-- PRODUCT 3 -->
+
+    <div class="product-card" data-category="tops">
+
+        <div class="product-image">
+            <img src="images/stylish top.jpg" alt="Women's Stylish Top">
+        </div>
+
+        <div class="product-info">
+
+            <span class="product-tag">TOPS</span>
+
+            <h3>Women's Stylish Top</h3>
+
+            <p>
+                A beautiful everyday top designed for effortless style.
+            </p>
+
+            <h4 class="price">₦6,000</h4>
+
+            <button onclick="addToCart('Womens Stylish Top', 6000)">
+                Add to Cart
+            </button>
+
+            <button
+                class="details-btn"
+                onclick="showProductDetails(
+                    'Womens Stylish Top',
+                    'images/stylish top.jpg',
+                    'A beautiful everyday top designed for effortless style.',
+                    6000
+                )">
+                View Details
+            </button>
+
+        </div>
+    </div>
+
+
+    <!-- PRODUCT 4 -->
+
+    <div class="product-card" data-category="men">
+
+        <div class="product-image">
+            <img src="images/classic trousers.jpg" alt="Men's Classic Trousers">
+        </div>
+
+        <div class="product-info">
+
+            <span class="product-tag">MEN</span>
+
+            <h3>Men's Classic Trousers</h3>
+
+            <p>
+                Classic trousers that combine comfort and smart style.
+            </p>
+
+            <h4 class="price">₦20,000</h4>
+
+            <button onclick="addToCart('Mens Classic Trousers', 20000)">
+                Add to Cart
+            </button>
+
+            <button
+                class="details-btn"
+                onclick="showProductDetails(
+                    'Mens Classic Trousers',
+                    'images/classic trousers.jpg',
+                    'Classic trousers that combine comfort and smart style.',
+                    20000
+                )">
+                View Details
+            </button>
+
+        </div>
+    </div>
+
+
+    <!-- PRODUCT 5 -->
+
+    <div class="product-card" data-category="dresses">
+
+        <div class="product-image">
+            <img src="images/fashion dress.jpg" alt="Vellora Fashion Dress">
+        </div>
+
+        <div class="product-info">
+
+            <span class="product-tag">DRESS</span>
+
+            <h3>Classic Fashion Dress</h3>
+
+            <p>
+                A versatile dress that adds elegance to your wardrobe.
+            </p>
+
+            <h4 class="price">₦8,000</h4>
+
+            <button onclick="addToCart('Classic Fashion Dress', 8000)">
+                Add to Cart
+            </button>
+
+            <button
+                class="details-btn"
+                onclick="showProductDetails(
+                    'Classic Fashion Dress',
+                    'images/fashion dress.jpg',
+                    'A versatile dress that adds elegance to your wardrobe.',
+                    8000
+                )">
+                View Details
+            </button>
+
+        </div>
+    </div>
+
+
+    <!-- PRODUCT 6 -->
+
+    <div class="product-card" data-category="unisex">
+
+        <div class="product-image">
+            <img src="images/unisex shirt.jpg" alt="Unisex Shirt">
+        </div>
+
+        <div class="product-info">
+
+            <span class="product-tag">UNISEX</span>
+
+            <h3>Premium Unisex Shirt</h3>
+
+            <p>
+                A simple and fashionable shirt suitable for everyone.
+            </p>
+
+            <h4 class="price">₦15,000</h4>
+
+            <button onclick="addToCart('Premium Unisex Shirt', 15000)">
+                Add to Cart
+            </button>
+
+            <button
+                class="details-btn"
+                onclick="showProductDetails(
+                    'Premium Unisex Shirt',
+                    'images/unisex shirt.jpg',
+                    'A simple and fashionable shirt suitable for everyone.',
+                    15000
+                )">
+                View Details
+            </button>
+
+        </div>
+    </div>
+
+
+    <!-- PRODUCT 7 -->
+
+    <div class="product-card" data-category="women">
+
+        <div class="product-image">
+            <img src="images/wide leg.jpg" alt="Women's Trousers">
+        </div>
+
+        <div class="product-info">
+
+            <span class="product-tag">WOMEN</span>
+
+            <h3>Women's Wide-Leg Trousers</h3>
+
+            <p>
+                Comfortable and fashionable trousers for everyday wear.
+            </p>
+
+            <h4 class="price">₦16,000</h4>
+          
+            <button onclick="addToCart('Womens Wide-Leg Trousers', 16000)">
+                Add to Cart
+            </button>
+
+            <button
+                class="details-btn"
+                onclick="showProductDetails(
+                    'Womens Wide-Leg Trousers',
+                    'images/wide leg.jpg',
+                    'Comfortable and fashionable trousers for everyday wear.',
+                    16000
+                )">
+                View Details
+            </button>
+
+        </div>
+    </div>
+
+
+    <!-- PRODUCT 8 -->
+
+    <div class="product-card" data-category="accessories">
+
+        <div class="product-image">
+            <img src="images/fashion-accessories.jpg" alt="Fashion Accessories">
+        </div>
+
+        <div class="product-info">
+
+            <span class="product-tag">ACCESSORY</span>
+
+            <h3>Fashion Accessories</h3>
+
+            <p>
+                Complete your outfit with stylish everyday accessories.
+            </p>
+
+            <h4 class="price">₦4,000</h4>
+
+            <button onclick="addToCart('Fashion Accessories', 4000)">
+                Add to Cart
+            </button>
+
+            <button
+                class="details-btn"
+                onclick="showProductDetails(
+                    'Fashion Accessories',
+                    'images/fashion-accessories.jpg',
+                    'Complete your outfit with stylish everyday accessories.',
+                    4000
+                )">
+                View Details
+            </button>
+
+        </div>
+    </div>
+   
+  <!-- PRODUCT 9 -->
+
+    <div class="product-card" data-category="bags">
+
+        <div class="product-image">
+            <img src="images/fashion bag.jpg" alt="Elegant Fashion Bags">
+        </div>
+
+        <div class="product-info">
+
+            <span class="product-tag">WOMEN</span>
+
+            <h3>Elegant Fashion Bags</h3>
+
+            <p>
+               Carry your essentials in style and make every outfit stand out.
+            </p>
+
+            <h4 class="price">₦12,000</h4>
+
+            <button onclick="addToCart('Elegant Fashion Bags', 12000)">
+                Add to Cart
+            </button>
+
+            <button
+                class="details-btn"
+                onclick="showProductDetails(
+                    'Elegant Fashion Bags',
+                    'images/fashion bag.jpg',
+                    'Carry your essentials in style and make every outfit stand out.',
+                    12000
+                )">
+                View Details
+            </button>
+        </div>
+    </div>
+  
+          <!-- PRODUCT 10 -->
+
+    <div class="product-card" data-category="unisex">
+
+        <div class="product-image">
+            <img src="images/snickers.jpg" alt="Unisex Sneakers">
+        </div>
+
+        <div class="product-info">
+
+            <span class="product-tag">UNISEX</span>
+
+            <h3>Unisex Sneakers</h3>
+
+            <p>
+                A must-have for your shoe collection, stylish and modern.
+            </p>
+
+            <h4 class="price">₦25,000</h4>
+
+            <button onclick="addToCart('Unisex Sneakers', 25000)">
+                Add to Cart
+            </button>
+
+            <button
+                class="details-btn"
+                onclick="showProductDetails(
+                    'Unisex Sneakers',
+                    'images/snickers.jpg',
+                    'A must-have for your shoe collection, stylish and modern.',
+                    25000
+                )">
+                View Details
+            </button>
+
+        </div>
+    </div>
+
+
+    <!-- PRODUCT 11 -->
+
+    <div class="product-card" data-category="unisex">
+
+        <div class="product-image">
+            <img src="images/unisex face cap.jpg" alt="Unisex Designer Caps">
+        </div>
+
+        <div class="product-info">
+
+            <span class="product-tag">UNISEX</span>
+
+            <h3>Premium Unisex Designer Caps</h3>
+
+            <p>
+                A simple and fashionable designer cap suitable for everyone.
+            </p>
+
+            <h4 class="price">₦8,000</h4>
+
+            <button onclick="addToCart('Premium Unisex Designer Caps', 8000)">
+                Add to Cart
+            </button>
+
+            <button
+                class="details-btn"
+                onclick="showProductDetails(
+                    'Premium Unisex Designer Caps',
+                    'images/unisex face cap.jpg',
+                    'A simple and fashionable designer cap suitable for everyone.',
+                    8000
+                )">
+                View Details
+            </button>
+
+        </div>
+    </div>
+</div>
+
+  
+</section><!-- ================================
+     ABOUT
+================================ --><section class="about" id="about"><div class="about-content">
+
+    <p class="gold-text">ABOUT VELLORA</p>
+
+    <h2>Fashion Made For You</h2>
+
+    <p>
+        Vellora Fashion Hub is a modern fashion store serving
+        stylish men and women with carefully selected clothing
+        and accessories.
+    </p>
+
+    <p>
+        We believe looking good should be simple, affordable and
+        enjoyable. Whether you're dressing for school, work,
+        an outing or a special occasion, Vellora has something
+        for your wardrobe.
+    </p>
+
+    <p class="location">
+        📍 University of Ibadan, Ajibode
+    </p>
+
+</div>
+
+</section><!-- ================================
+     WHY CHOOSE US
+================================ --><section class="why-us"><div class="section-heading">
+
+    <p>WHY VELLORA?</p>
+
+    <h2>Fashion You Can Feel Good In</h2>
+
+</div>
+
+<div class="features">
+
+    <div class="feature">
+        <div class="feature-icon">✦</div>
+        <h3>Quality</h3>
+        <p>
+            Carefully selected fashion pieces for your wardrobe.
+        </p>
+    </div>
+
+    <div class="feature">
+        <div class="feature-icon">♡</div>
+        <h3>Affordable</h3>
+        <p>
+            Stylish clothing at prices designed for everyone.
+        </p>
+    </div>
+
+    <div class="feature">
+        <div class="feature-icon">✧</div>
+        <h3>Trendy</h3>
+        <p>
+            Modern styles that help you express your personality.
+        </p>
+    </div>
+
+</div>
+
+</section>
+  
+  <!-- ================================
+     CART
+================================ -->
+  <section class="cart-section" id="cart">
+    <div class="section-heading">
+
+    <p>YOUR BAG</p>
+
+    <h2>Shopping Cart 🛍️</h2>
+
+</div>
+
+<div id="cart-items">
+    <p>Your cart is empty.</p>
+</div>
+
+<div class="cart-total">
+    <strong>
+        Total: ₦<span id="cart-total">0</span>
+    </strong>
+</div>
+
+<div class="cart-buttons">
+
+    <button class="clear-cart-btn" onclick="clearCart()">
+        Clear Cart
+    </button>
+
+    <button class="checkout-btn" onclick="checkout()">
+        Checkout on WhatsApp 📱
+    </button>
+
+</div>
+
+
+<!-- CHECKOUT FORM -->
+
+<div id="checkout-form" class="checkout-form">
+
+    <h2>Complete Your Order</h2>
+
+    <p>
+        Enter your details and we'll receive your order on WhatsApp.
+    </p>
+
+    <div class="order-summary">
+
+        <h3>🛍️ Order Summary</h3>
+
+        <div id="checkout-order-items"></div>
+
+        <div class="checkout-summary-total">
+            Total: ₦<span id="checkout-total">0</span>
+        </div>
+
+    </div>
+
+    <label for="customer-name">Full Name</label>
+
+    <input
+        type="text"
+        id="customer-name"
+        placeholder="Enter your full name"
+    >
+
+    <label for="customer-phone">Phone Number</label>
+
+    <input
+        type="tel"
+        id="customer-phone"
+        placeholder="08012345678"
+    >
+
+    <label for="customer-address">Delivery Address</label>
+
+    <textarea
+        id="customer-address"
+        placeholder="Enter your delivery address"
+    ></textarea>
+
+    <label for="customer-city">City</label>
+
+    <input
+        type="text"
+        id="customer-city"
+        placeholder="Enter your city"
+    >
+
+    <label for="payment-method">Payment Method</label>
+
+    <select id="payment-method">
+        <option value="Bank Transfer">Bank Transfer</option>
+        <option value="Cash on Delivery">Cash on Delivery</option>
+    </select>
+
+    <button
+        type="button"
+        class="place-order-btn"
+        onclick="sendOrderToWhatsApp()">
+
+        Place Order on WhatsApp 📱
+
+    </button>
+
+</div>
+
+</section><!-- ================================
+     REVIEWS
+================================ --><section class="reviews" id="reviews"><div class="section-heading">
+
+    <p>CUSTOMER LOVE</p>
+
+    <h2>What Our Customers Say</h2>
+
+</div>
+
+<div class="reviews-container">
+
+    <div class="review-card">
+
+        <div class="stars">★★★★★</div>
+
+        <p>
+            "I love the quality of the clothes I got from Vellora.
+            Everything looked even better in person!"
+        </p>
+
+        <h3>— Aisha</h3>
+
+    </div>
+
+    <div class="review-card">
+
+        <div class="stars">★★★★★</div>
+
+        <p>
+            "The outfit was beautiful, affordable and exactly
+            what I was looking for."
+        </p>
+
+        <h3>— David</h3>
+
+    </div>
+
+    <div class="review-card">
+
+        <div class="stars">★★★★★</div>
+
+        <p>
+            "Vellora has really nice fashion pieces. I'll definitely
+            shop again."
+        </p>
+
+        <h3>— Zainab</h3>
+
+    </div>
+
+</div>
+
+</section><!-- ================================
+     CONTACT
+================================ --><section class="contact" id="contact"><div class="contact-content">
+
+    <p class="gold-text">LET'S CONNECT</p>
+
+    <h2>Looking For Your Next Outfit?</h2>
+
+    <p>
+        Contact Vellora Fashion Hub for orders, enquiries,
+        availability and more.
+    </p>
+
+    <div class="contact-details">
+
+        <p>📍 University of Ibadan, Ajibode</p>
+
+        <p>📞 08106330326</p>
+
+        <p>📞 08164812401</p>
+
+        <p>✉️ okunadefaith9@gmail.com</p>
+
+    </div>
+
+    <a
+        href="https://wa.me/2348164830326"
+        class="whatsapp-btn"
+        target="_blank"
+        rel="noopener">
+
+        Chat With Us on WhatsApp 📱
+
+    </a>
+
+</div>
+
+</section><!-- ================================
+     FOOTER
+================================ --><footer><div class="footer-logo">
+    VELLORA <span>FASHION HUB</span>
+</div>
+
+<p>
+    Style • Confidence • Elegance
+</p>
+
+<p>
+    University of Ibadan, Ajibode
+</p>
+
+<p class="copyright">
+    © 2026 Vellora Fashion Hub. All Rights Reserved.
+</p>
+
+</footer><!-- ================================
+     BACK TO TOP
+================================ --><button
+id="back-to-top"
+onclick="scrollToTop()"
+aria-label="Back to top">
+
+↑
+
+</button><!-- ================================
+     FLOATING WHATSAPP
+================================ --><a
+href="https://wa.me/2348164830326"
+class="floating-whatsapp"
+target="_blank"
+rel="noopener"
+aria-label="Chat with Vellora Fashion Hub">
+
+💬
+
+</a><script src="script.js"></script></body>
+</html>
